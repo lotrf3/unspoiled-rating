@@ -1,0 +1,96 @@
+<link rel="import" href="../core-icons/core-icons.html">
+<link rel="import" href="../core-icon/core-icon.html">
+
+<polymer-element name="unspoiled-rating">
+
+  <template>
+    <style>    
+      :host {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      #core_selector {
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        position: absolute;
+      }
+      #star1 {
+        height: 48px;
+        width: 48px;
+      }
+      #star4 {
+        height: 48px;
+        width: 48px;
+      }
+      #star3 {
+        height: 48px;
+        width: 48px;
+      }
+      core-icon:hover {
+        color: rgb(0, 0, 0);
+      }
+      #star5 {
+        height: 48px;
+        width: 48px;
+      }
+      #star2 {
+        height: 48px;
+        width: 48px;
+      }
+    </style>
+    <core-selector id="core_selector" selected="0" selectedindex="0">
+      <core-icon size="48" icon="star-outline" id="star1" class="star" on-tap="{{ rate1 }}" active></core-icon>
+      <core-icon size="48" icon="star-outline" id="star2" class="star" on-tap="{{ rate2 }}"></core-icon>
+      <core-icon size="48" icon="star-outline" id="star3" class="star" on-tap="{{ rate3 }}"></core-icon>
+      <core-icon size="48" icon="star-outline" id="star4" class="star" on-tap="{{ rate4 }}"></core-icon>
+      <core-icon size="48" icon="star-outline" id="star5" class="star" on-tap="{{ rate5 }}"></core-icon>
+    </core-selector>
+  </template>
+
+  <script>
+
+    Polymer('unspoiled-rating', {
+      rate1: function (){
+        this.$.star1.icon='star';
+        this.$.star2.icon='star-outline';
+        this.$.star3.icon='star-outline';
+        this.$.star4.icon='star-outline';
+        this.$.star5.icon='star-outline';
+      },
+      rate2: function (){
+        this.$.star1.icon='star';
+        this.$.star2.icon='star';
+        this.$.star3.icon='star-outline';
+        this.$.star4.icon='star-outline';
+        this.$.star5.icon='star-outline';
+      },
+      rate3: function (){
+        this.$.star1.icon='star';
+        this.$.star2.icon='star';
+        this.$.star3.icon='star';
+        this.$.star4.icon='star-outline';
+        this.$.star5.icon='star-outline';
+      },
+      rate4: function (){
+        this.$.star1.icon='star';
+        this.$.star2.icon='star';
+        this.$.star3.icon='star';
+        this.$.star4.icon='star';
+        this.$.star5.icon='star-outline';
+      },
+      rate5: function (){
+        this.$.star1.icon='star';
+        this.$.star2.icon='star';
+        this.$.star3.icon='star';
+        this.$.star4.icon='star';
+        this.$.star5.icon='star';
+      }
+    });
+
+  </script>
+
+</polymer-element>
